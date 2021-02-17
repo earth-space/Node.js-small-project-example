@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO</title>
+    <link rel="stylesheet" href="../public/stylesheets/main.css">
+</head>
+<body>
+    <h1 class="main-text">TODO LIST</h1>
+    <hr><br>
+    <form action="/create" method="post" class="form-box">
+        <input type="text" class="text-box" name="content">
+        <button type="submit" class="btn-gradient purple">Write</button>
+    </form>
+    <br>
+    <ul class="list-box">
+        <% todoTasks.forEach(tasks => { %>
+        <li class="todo-item">
+            <div class="todo-item-content"><%= tasks.content %></div>
+            <a href="/edit/<%= tasks._id %>" class="edit"> edit </a>
+            <a href="/edit/<%= tasks._id %>" class="remove"> remove </a>
+        </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
