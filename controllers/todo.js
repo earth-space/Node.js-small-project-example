@@ -7,6 +7,7 @@ moment.tz.setDefault("Asia/Seoul");
 
 // Controller
 exports.get = function(req, res){
+    console.log("------------!!Todo!!------------");
     TodoTask.find({}, null, {sort: {date: -1}}, (err, tasks) => {
     res.render("todo", { todoTasks: tasks });
     });

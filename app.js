@@ -1,3 +1,4 @@
+// Import Module
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -32,7 +33,7 @@ app.use(expressErrorHandler.httpError(404));
 app.use(errorHandler);
 
 // Connect to DB
-mongoose.connect("mongodb://localhost:27017/local", function(err){
+mongoose.connect("mongodb://localhost:27017/todo", function(err){
     if(err){
         console.error("mongoDB Connection Error!", err);
     }

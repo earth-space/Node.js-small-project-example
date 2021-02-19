@@ -6,7 +6,7 @@
  
  ex)
  const NewRouter = require('./new');
- router.use('/new', mainRouter);
+ router.use('/new', newRouter);
 */
 
 const express = require("express");
@@ -16,7 +16,11 @@ const router = express.Router();
 // Todo Router
 const TodoRouter = require('./todo');
 
+// Weather Router
+const WeatherRouter = require('./weather');
+
 // Refactoring
 router.use('/todo', TodoRouter);
+router.use('/weather', WeatherRouter);
 
 module.exports = router;
