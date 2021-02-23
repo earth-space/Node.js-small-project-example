@@ -3,7 +3,7 @@ const request = require("request");
 // Controller
 exports.get = function(req, res){
     console.log("------------!!Weather!!------------");
-    res.render("weather", {weatherInfo: null, error: null});
+    res.render("./weather/weather", {weatherInfo: null, error: null});
 };
 
 exports.search = function(req, res){
@@ -12,7 +12,7 @@ exports.search = function(req, res){
     
     request(url, function(err, response, body){
         if(err){
-            res.render("weather", {weatherInfo: null, error: "Error, Please Try Again!"});
+            res.render("./weather/weather", {weatherInfo: null, error: "Error, Please Try Again!"});
             console.log("\u001b[31m", "==== Fail!! Searching ====");
             console.error(err);
         } else{
@@ -20,7 +20,7 @@ exports.search = function(req, res){
             
             if(weather.main == undefined){
                 console.log("\u001b[31m", "==== Fail!! Searching ====");
-                res.render("weather", {weatherInfo: null, error: "Error, Please Try Again!"});
+                res.render("./weather/weather", {weatherInfo: null, error: "Error, Please Try Again!"});
             } else{
                 console.log("\u001b[36m", "==== Success!! Searching ==== : " + city);
                 //Weather Information Object
@@ -34,7 +34,7 @@ exports.search = function(req, res){
                     icon : weather.weather[0].icon
                 };
                 console.table(weatherInfo);
-                res.render("weather", {weatherInfo : weatherInfo, error: null});
+                res.render("./weather/weather", {weatherInfo : weatherInfo, error: null});
             }
         }
     });

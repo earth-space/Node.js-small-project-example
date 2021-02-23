@@ -1,0 +1,125 @@
+@font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
+@font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
+@font-face{font-family:'Nanum BarunpenR'; src:url('../fonts/NanumBarunpenR.ttf')}
+@font-face{font-family:'Nanum SquareL'; src:url('../fonts/NanumSquareL.ttf')}
+@font-face{font-family:'Nanum SquareRoundB'; src:url('../fonts/NanumSquareRoundB.ttf')}
+
+body{
+    height: 100vh;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	text-align: center;
+    margin: 0;
+	background: #EFF6F0;
+	font-family: 'Nanum Gothic';
+}
+
+#img{
+    background-color: transparent;
+    border: 0px transparent solid;
+    cursor: pointer;
+    outline: none;
+}
+
+.box{
+    display: grid;
+    place-items: center;
+	place-content: center;
+}
+
+.main-text{
+    font-size: 45px;
+    color: #2D6632;
+    font-family: 'Nanum SquareEB';
+}
+
+.user-box{
+    background-color: #E0EEE2;
+	width: 200px;
+    height: 500px;
+    border-radius: 10px;
+    color: #144750;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 18px;
+    text-align: left;
+    overflow: auto;
+
+}
+
+.chat-box{
+	background-color: #D1E6D3;
+	width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    color: #144750;
+    padding: 10px;
+    text-align: left;
+    overflow: auto;
+    padding-bottom: 30px;
+    grid-column-start: 2;
+}
+
+.form-box{
+    width: 420px;
+    height: 50px;
+    background-color: #D1E6D3;
+    border-radius: 10px;
+    margin-top: -20px;
+    z-index: 1;
+    grid-column-start: 2;
+}
+
+.btn-gradient {
+    font-family: 'Nanum Gothic';
+    margin: 5px;
+    padding: 6px 12px;  
+    font-size: 14px;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-gradient.green {
+	background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+}
+
+#users-title{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0px 15px 10px;
+    color: #2D6632;
+}
+
+#msg{
+    width: 330px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+#notice{
+    color: #696969;
+    font-family: "Nanum Gothic" !important;
+    font-weight: 600;
+}
+
+#messages, #users{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li, #users li{
+    padding: 5px 10px;
+    font-size: 15px;
+}

@@ -13,6 +13,13 @@ body{
 	background: #EFF5F6;
 }
 
+#img{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 .main-text{
     font-size: 45px;
     color: #144750;
@@ -52,13 +59,7 @@ body{
 }
 
 .btn-gradient.cyan {
-	background: rgba(27,188,194,1);
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27,188,194,1)), to(rgba(24,163,168,1)));
-	background: -webkit-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
-	background: -moz-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
-	background: -o-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
 	background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1bbcc2', endColorstr='#18a3a8', GradientType=0);
 }
 
 .weather-box{

@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 
 // Controller
-const controller = require("../controllers/todo");
+const controller = require("../../controllers/todo/todo");
 
 // Main
 router.get('/', controller.get);

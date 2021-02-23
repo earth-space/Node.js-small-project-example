@@ -1,5 +1,5 @@
 // Model
-const TodoTask = require("../models/todoTask");
+const TodoTask = require("../../models/todo/todoTask");
 
 // KST Setting
 var moment = require('moment-timezone');
@@ -9,7 +9,7 @@ moment.tz.setDefault("Asia/Seoul");
 exports.get = function(req, res){
     console.log("------------!!Todo!!------------");
     TodoTask.find({}, null, {sort: {date: -1}}, (err, tasks) => {
-    res.render("todo", { todoTasks: tasks });
+    res.render("./todo/todo", { todoTasks: tasks });
     });
 };
 
@@ -32,7 +32,7 @@ exports.write = async function(req, res){
 exports.edit = function(req, res){
     const id = req.params.id;
     TodoTask.find({}, null, {sort: {date: -1}}, (err, tasks) => {
-        res.render("todo-edit", { todoTasks: tasks, idTask: id });
+        res.render("./todo/todo-edit", { todoTasks: tasks, idTask: id });
     });
 };
 
