@@ -1,0 +1,122 @@
+@font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
+@font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
+@font-face{font-family:'Nanum SquareL'; src:url('../fonts/NanumSquareL.ttf')}
+@font-face{font-family:'Nanum SquareRoundB'; src:url('../fonts/NanumSquareRoundB.ttf')}
+
+body{
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	place-content: center;
+    margin: 0;
+	background: #EFF5F6;
+}
+
+#img{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.main-text{
+    font-size: 45px;
+    color: #144750;
+    font-family: 'Nanum SquareEB';
+}
+
+.form-box{
+	background-color: #D1E3E6;
+	padding: 2rem;
+	margin-top: -2.5rem;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+    border-radius: 10px;
+    outline: none;
+}
+
+.text-box{
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+.btn-gradient {
+    outline: none;
+    font-family: 'Nanum Gothic';
+    margin: 5px;
+    padding: 8px 18px;  
+    font-size: 14px;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.btn-gradient.cyan {
+	background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+}
+
+.weather-box{
+    background-color: #D1E3E6;
+    width: 360px;
+	margin: 20px 0px;
+	overflow: hidden;
+    border-radius: 10px;
+    color: #144750;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#img{
+    background-color: transparent;
+    border: 0px transparent solid;
+    cursor: pointer;
+}
+
+#city-name{
+    font-family: "Nanum SquareEB";
+    font-size: 40px;
+    margin: 30px 0px 0px 0px;
+}
+
+#temp{
+    display: inline-block;
+    font-family: "Nanum SquareRoundB";
+    font-size: 35px;
+    margin: 0px 0px 0px 10px;
+}
+
+#description{
+    display: inline-block;
+    font-family: "Nanum SquareRoundB";
+    font-size: 15px;
+}
+
+#feelslike{
+    font-family: "Nanum SquareRoundB";
+    font-size: 18px;
+}
+
+#max{
+    display: inline;
+    color: #7F4339;
+    font-family: "Nanum SquareRoundB";
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#min{
+    display: inline;
+    color: #0C7ABF;
+    font-family: "Nanum SquareRoundB";
+        font-size: 25px;
+    font-weight: 300;
+}

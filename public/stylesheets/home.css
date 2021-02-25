@@ -1,0 +1,62 @@
+@font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
+@font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
+
+body{
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	text-align: center;
+    margin: 0;
+	background: #F6F6F6;
+}
+
+.home{
+    margin-bottom: 60px;
+}
+
+#img{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.navigator{
+    margin-bottom: 100px;
+}
+
+.btn-gradient.large{
+    padding: 20px 40px; 
+    font-size: 22px;
+    outline: none;
+}
+
+.btn-gradient {
+    font-family: 'Nanum Gothic';
+    margin: 5px;
+    padding: 8px 18px;  
+    font-size: 14px;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.btn-gradient.purple { 
+	background: linear-gradient(to bottom, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+}
+
+.btn-gradient.cyan {
+	background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+}
+
+.btn-gradient.green {
+	background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+}
+

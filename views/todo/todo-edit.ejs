@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO EDIT</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/todo.css">
+</head>
+<body>
+    <div class="home">
+        <button type="button" id="img" onclick="location.href='/'">
+            <img src="../../public/images/rainbow.png" width="70">
+        </button>
+    </div>
+    <h1 class="main-text">TODO LIST</h1>
+    <hr><br>
+    <form action="/todo/write" method="post" class="form-box">
+        <input type="text" class="text-box" name="content">
+        <button type="submit" class="btn-gradient purple">Write</button>
+    </form>
+    <br>
+    <ul class="list-box">
+        <% 
+        var date = "";
+        var next_date = "";
+        todoTasks.forEach(tasks => { 
+            date = (tasks.date).substring(0, 10);
+            if(date != next_date){
+                next_date = date;
+        %>
+                <li>
+                    <div class="date"><%= date %></div>
+                </li>
+        <% } if(tasks._id == idTask) { %>
+            <li class="todo-item">
+              <form action="/todo/update/<%= tasks._id %>" method="post">
+                <input type="text" value="<%= tasks.content %>" name="content" id="edit-box">
+                <button type="submit" id="img">
+                    <img src="/public/images/peach.png" width="30px" height="30px">
+                </button>
+                <button type="button" id="img" onclick="location.href='/todo'">
+                    <img src="/public/images/peach.png" width="30px" height="30px">
+                </button>
+              </form>
+            </li>
+              <% } else { %>
+            <li class="todo-item">
+                <div class="todo-item-content">&emsp;<%= tasks.content %> &emsp; </div>
+                <div class="edit-btn">
+                    <button type="button" id="img" onclick="location.href='/edit/<%= tasks._id %>'">
+                        <img src="/public/images/grape.png" width="30px" height="30px">
+                    </button>
+                    <button type="button" id="img" onclick="location.href='/remove/<%= tasks._id %>'">
+                        <img src="/public/images/grape.png" width="30px" height="30px">
+                    </button>
+                </div>
+            </li>
+        <% }}); %>
+    </ul>
+</body>
+</html>

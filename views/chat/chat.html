@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CHAT</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/chat.css">
+</head>
+<body>
+    <div class="home">
+        <button type="button" id="img" onclick="location.href='/'">
+            <img src="../../public/images/rainbow.png" width="70">
+        </button>
+    </div>
+    <h1 class="main-text">CHAT</h1>
+    <div class="box">
+        <div class="user-box">
+            <p id="users-title">Users</p>
+            <ul id="users"></ul>
+        </div>
+        <div class="chat-box">
+            <ul id="messages"></ul>
+        </div>
+        <form action="" class="form-box">
+            <input type="text" id="msg" placeholder="Write a Message" autocomplete="off">
+            <button type="submit" class="btn-gradient green">Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(() => {
+            const socket = io();
+            
+            // 사용자 이름 입력
+            var name = prompt("사용하실 닉네임을 입력하세요");
+            socket.emit("nickname", name); // 이름 보내기
+            socket.on("notice", (notice) => { // 알림 받기
+                if(notice.conn){
+                    $("#messages").append($("<li id='notice'>").text("[알림] " + notice.nickname + "님이 입장하셨습니다. "));
+                    $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
+                }
+                else{
+                    $("#messages").append($("<li id='notice'>").text("[알림] " + notice.nickname + "님이 퇴장하셨습니다. "));
+                    $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
+                }
+            });
+            
+            // 사용자 리스트 받기
+            socket.on("users", (users) => {
+                $("#users").empty();
+                for(var i=0; i < users.length; i++){
+                    $("#users").append($("<li>").text(users[i]));
+                }
+            });
+            
+            // 전송 버튼 클릭시
+            $("form").submit(() => {
+                var msg = $("#msg").val();
+                socket.emit("chat message", {name: name, msg: msg}); // 메시지 보내기
+                $("#msg").val("");
+                return false;
+            });
+            
+            // 메시지 받기
+            socket.on("chat message", (chat) => {
+                $("#messages").append("<li id='chat'><b><font color='#458A4D'>" + chat.name + "</font></b>&ensp;" + chat.msg);
+                $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
+            });
+        });
+    </script>
+</body>
+</html>

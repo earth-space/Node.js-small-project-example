@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/todo.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="home">
+        <button type="button" id="img" onclick="location.href='/'">
+            <img src="../public/images/rainbow.png" width="70">
+        </button>
+    </div>
+    <h1 class="main-text">TODO LIST</h1>
+    <hr><br>
+    <form action="/todo/write" method="post" class="form-box">
+        <input type="text" class="text-box" placeholder="Enter todo" name="content">
+        <button type="submit" class="btn-gradient purple">Write</button>
+    </form>
+    <br>
+    <ul class="list-box">
+        <% 
+        var date = "";
+        var next_date = "";
+        todoTasks.forEach(tasks => { 
+            date = (tasks.date).substring(0, 10);
+            if(date != next_date){
+                next_date = date;
+        %>
+            <li>
+                <div class="date"><%= date %></div>
+            </li>
+            <% } %>
+            <li class="todo-item">
+                <div class="todo-item-content" id="content">&emsp;<%= tasks.content %> &emsp; </div>
+                <div class="edit-btn">
+                    <button type="button" id="img" onclick="location.href='/todo/edit/<%= tasks._id %>'"><img src="../public/images/grape.png" width="30px" height="30px"></button>
+                    <button type="button" id="img" onclick="location.href='/todo/remove/<%= tasks._id %>'"><img src="../public/images/grape.png" width="30px" height="30px"></button>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
