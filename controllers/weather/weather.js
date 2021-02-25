@@ -8,7 +8,7 @@ exports.get = function(req, res){
 
 exports.search = function(req, res){
     let city = req.body.city;
-    let url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=bcc2bd609afdc9521aaedea0958898d2&lang=kr";
+    let url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=bcc2bd609afdc9521aaedea0958898d2&lang=kr"; // API
     
     request(url, function(err, response, body){
         if(err){

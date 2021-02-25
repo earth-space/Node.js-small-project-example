@@ -1,6 +1,6 @@
+@font-face{font-family:'NanumSquare_acR'; src:url('../fonts/NanumSquare_acR.ttf')}
 @font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
 @font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
-@font-face{font-family:'Nanum BarunpenR'; src:url('../fonts/NanumBarunpenR.ttf')}
 @font-face{font-family:'Nanum SquareL'; src:url('../fonts/NanumSquareL.ttf')}
 @font-face{font-family:'Nanum SquareRoundB'; src:url('../fonts/NanumSquareRoundB.ttf')}
 
@@ -10,7 +10,8 @@ body{
 	place-items: center;
 	place-content: center;
     margin: 0;
-	background: #EFF5F6;
+	background: white;
+	font-family: 'NanumSquare_acR';
 }
 
 #img{
@@ -22,53 +23,57 @@ body{
 
 .main-text{
     font-size: 45px;
-    color: #144750;
+    color: #03151D;
     font-family: 'Nanum SquareEB';
 }
 
 .form-box{
-	background-color: #D1E3E6;
+	background-color: #BCE1F1;
 	padding: 2rem;
 	margin-top: -2.5rem;
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
     border-radius: 10px;
+    outline: none;
 }
 
 .text-box{
     width: 200px;
     height: 30px;
-    border: none;
+    border-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-family: "NanumSquare_acR";
 }
 
-.btn-gradient {
-    font-family: 'Nanum Gothic';
-    margin: 5px;
-    padding: 8px 18px;  
-    font-size: 14px;
-	text-decoration: none;
-	color: white;
+.btn {
+	background-color: white;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
 	display: inline-block;
-	position: relative;
-	border: 1px solid rgba(0,0,0,0.21);
-	border-bottom: 4px solid rgba(0,0,0,0.21);
-	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	color:#666666;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+    height: 40px;
+    width:73px;
+	text-align:center;
     cursor: pointer;
 }
 
-.btn-gradient.cyan {
-	background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+.btn:hover {
+	background-color:#f6f6f6;
 }
 
 .weather-box{
-    background-color: #D1E3E6;
+    background-color: #BCE1F1;
     width: 360px;
 	margin: 20px 0px;
 	overflow: hidden;
     border-radius: 10px;
-    color: #144750;
+    color: #03151D;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -80,33 +85,34 @@ body{
 }
 
 #city-name{
-    font-family: "Nanum SquareRoundB";
+    font-family: "NanumSquare_acR";
     font-size: 40px;
     margin: 30px 0px 0px 0px;
+    font-weight: 600;
 }
 
 #temp{
     display: inline-block;
-    font-family: "Nanum BarunpenR";
+    font-family: "NanumSquare_acR";
     font-size: 35px;
     margin: 0px 0px 0px 10px;
 }
 
 #description{
     display: inline-block;
-    font-family: "Nanum BarunpenR";
+    font-family: "NanumSquare_acR";
     font-size: 15px;
 }
 
 #feelslike{
-    font-family: "Nanum BarunpenR";
+    font-family: "NanumSquare_acR";
     font-size: 18px;
 }
 
 #max{
     display: inline;
     color: #7F4339;
-    font-family: "Nanum BarunpenR";
+    font-family: "NanumSquare_acR";
     font-size: 25px;
     font-weight: 300;
 }
@@ -114,7 +120,7 @@ body{
 #min{
     display: inline;
     color: #0C7ABF;
-    font-family: "Nanum BarunpenR";
+    font-family: "NanumSquare_acR";
         font-size: 25px;
     font-weight: 300;
 }

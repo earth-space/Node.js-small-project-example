@@ -1,4 +1,4 @@
-@font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
+@font-face{font-family:'NanumSquare_acR'; src:url('../fonts/NanumSquare_acR.ttf')}
 @font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
 
 body{
@@ -8,8 +8,8 @@ body{
 	place-content: center;
 	text-align: center;
     margin: 0;
-	background: #F6EFF5;
-	font-family: 'Nanum Gothic';
+	background: white;
+	font-family: 'NanumSquare_acR';
 }
 
 ul{
@@ -21,17 +21,17 @@ ul{
 li{
     padding: 10px 0px;
     margin: 10px 20px 10px 30px;
-    border-bottom: 1px solid #C594BF;
+    border-bottom: 1px solid grey;
 }
 
 .main-text{
     font-size: 45px;
-    color: #8A4582;
+    color: #03151D;
     font-family: 'Nanum SquareEB';
 }
 
 .form-box{
-	background-color: #EEE0EC;
+	background-color: #BCE1F1;
 	padding: 2rem;
 	margin-top: -2.5rem;
 	z-index: 1;
@@ -43,54 +43,59 @@ li{
 .text-box{
     width: 200px;
     height: 30px;
-    border: none;
+    border-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-family: "NanumSquare_acR";
 }
 
-.btn-gradient {
-    font-family: 'Nanum Gothic';
-    margin: 5px;
-    padding: 8px 18px;  
-    font-size: 14px;
-	text-decoration: none;
-	color: white;
+.btn {
+	background-color: white;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
 	display: inline-block;
-	position: relative;
-	border: 1px solid rgba(0,0,0,0.21);
-	border-bottom: 4px solid rgba(0,0,0,0.21);
-	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	color:#666666;
+	font-family:arial;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: normal;
+    height:35px;
+    width:67px;
+	text-align:center;
     cursor: pointer;
+    outline: none;
 }
 
-.btn-gradient.purple { 
-	background: linear-gradient(to bottom, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+.btn:hover {
+	background-color:#f6f6f6;
 }
 
 .list-box{
-    background-color: #EEE0EC;
-    width: 300px;
-	padding: 20px;
+    background-color: #BCE1F1;
+    width: 315px;
+    height: 430px;
+	padding: 0px 20px;
 	margin-top: 20px;
-	overflow: hidden;
+	overflow: auto;
     border-radius: 10px;
 }
 
 .todo-item-content{
     display: inline;
     margin-bottom: 2px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .edit-btn, .remove-btn{
     display: inline;
     float: right;
-    
 }
 
 .date{
-    font-weight: 500;
-    font-family: 'Nanum SquareEB';
-    color: #8A4582;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'KoPubDotumBold';
+    color: #03151D;
 }
 
 .home{
@@ -107,9 +112,12 @@ li{
 #edit-box{
     font-family: 'Nanum Gothic';
     display: inline;
-    margin: 0px 8px 0px 15px;
+    margin: 0px 8px 0px 5px;
     width: 130px;
     height: 28px;
     font-size: 15px;
-    border: none;
+    border-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-family: "NanumSquare_acR";
 }

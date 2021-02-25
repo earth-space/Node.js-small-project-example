@@ -3,9 +3,6 @@ const express = require("express");
 const app = express();
 const io = require("../../app");
 
-// Model
-const ChatMsg = require("../../models/chat/chatMsg");
-
 // Controller
 exports.get = function(req, res){
     res.render("./chat/chat.html")

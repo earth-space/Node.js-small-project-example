@@ -8,14 +8,14 @@
 <body>
     <div class="home">
         <button type="button" id="img" onclick="location.href='/'">
-            <img src="../../public/images/rainbow.png" width="70">
+            <img src="../../public/images/home.png" width="70">
         </button>
     </div>
     <h1 class="main-text">WEATHER</h1>
     <hr><br>
     <form action="/weather/search" method="post" class="form-box">
         <input type="text" class="text-box" name="city" placeholder="Enter a City" required>
-        <button type="submit" class="btn-gradient cyan">Search</button>
+        <button type="submit" class="btn">Search</button>
     </form>
     <br>
     <% if(weatherInfo != null){ %>

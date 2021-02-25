@@ -1,8 +1,6 @@
+@font-face{font-family:'NanumSquare_acR'; src:url('../fonts/NanumSquare_acR.ttf')}
 @font-face{font-family:'Nanum Gothic'; src:url('../fonts/NanumBarunGothic.ttf')}
 @font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
-@font-face{font-family:'Nanum BarunpenR'; src:url('../fonts/NanumBarunpenR.ttf')}
-@font-face{font-family:'Nanum SquareL'; src:url('../fonts/NanumSquareL.ttf')}
-@font-face{font-family:'Nanum SquareRoundB'; src:url('../fonts/NanumSquareRoundB.ttf')}
 
 body{
     height: 100vh;
@@ -11,8 +9,8 @@ body{
 	place-content: center;
 	text-align: center;
     margin: 0;
-	background: #EFF6F0;
-	font-family: 'Nanum Gothic';
+	background: white;
+	font-family: 'NanumSquare_acR';
 }
 
 #img{
@@ -30,12 +28,12 @@ body{
 
 .main-text{
     font-size: 45px;
-    color: #2D6632;
+    color: #03151D;
     font-family: 'Nanum SquareEB';
 }
 
 .user-box{
-    background-color: #E0EEE2;
+    background-color: #DDF0F8;
 	width: 200px;
     height: 500px;
     border-radius: 10px;
@@ -49,7 +47,7 @@ body{
 }
 
 .chat-box{
-	background-color: #D1E6D3;
+	background-color: #BCE1F1;
 	width: 400px;
     height: 500px;
     border-radius: 10px;
@@ -64,39 +62,41 @@ body{
 .form-box{
     width: 420px;
     height: 50px;
-    background-color: #D1E6D3;
+    background-color: #BCE1F1;
     border-radius: 10px;
     margin-top: -20px;
     z-index: 1;
     grid-column-start: 2;
+    font-family: "NanumSquare_acR";
 }
 
-.btn-gradient {
-    font-family: 'Nanum Gothic';
-    margin: 5px;
-    padding: 6px 12px;  
-    font-size: 14px;
-	text-decoration: none;
-	color: white;
+.btn {
+	background-color: white;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
 	display: inline-block;
-	position: relative;
-	border: 1px solid rgba(0,0,0,0.21);
-	border-bottom: 4px solid rgba(0,0,0,0.21);
-	border-radius: 4px;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	color:#666666;
+	font-family:arial;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: normal;
+    height:35px;
+    width:67px;
+	text-align:center;
     cursor: pointer;
     outline: none;
 }
 
-.btn-gradient.green {
-	background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+.btn:hover {
+	background-color:#f6f6f6;
 }
+
 
 #users-title{
     font-size: 20px;
     font-weight: 600;
     margin: 10px 0px 15px 10px;
-    color: #2D6632;
+    color: #03151D;
 }
 
 #msg{
