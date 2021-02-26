@@ -1,0 +1,15 @@
+// 백엔드
+controllers - 실제 데이터 처리하는 로직 부분
+models - 몽고DB에서 사용할 스키마 파일들
+routes - url을 보고 컨트롤러의 메소드를 연결해주는 부분
+
+//프론트엔드
+public - fonts, css, images 부분
+views - 웹 페이지 ejs, pug, html 등등 사용, jsp와 유사
+
+// 실행 파일
+app.js - 실행 서버 파일 ex) node app.js, nodemon app.js, npm start 이렇게 실행
+package.json - dependencies 리스트가 있어서 이 폴더 경로에서 npm install 시 모듈 전부 설치됨
+
+
+

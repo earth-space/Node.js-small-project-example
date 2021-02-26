@@ -1,0 +1,123 @@
+@font-face{font-family:'NanumSquare_acR'; src:url('../fonts/NanumSquare_acR.ttf')}
+@font-face{font-family:'Nanum SquareEB'; src:url('../fonts/NanumSquareEB.ttf')}
+
+body{
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	text-align: center;
+    margin: 0;
+	background: white;
+	font-family: 'NanumSquare_acR';
+}
+
+ul{
+    list-style-type: none;
+    font-size: 20px;
+    text-align: left;
+}
+
+li{
+    padding: 10px 0px;
+    margin: 10px 20px 10px 30px;
+    border-bottom: 1px solid grey;
+}
+
+.main-text{
+    font-size: 45px;
+    color: #03151D;
+    font-family: 'Nanum SquareEB';
+}
+
+.form-box{
+	background-color: #BCE1F1;
+	padding: 2rem;
+	margin-top: -2.5rem;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+    border-radius: 10px;
+}
+
+.text-box{
+    width: 200px;
+    height: 30px;
+    border-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-family: "NanumSquare_acR";
+}
+
+.btn {
+	background-color: white;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color:#666666;
+	font-family:arial;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: normal;
+    height:35px;
+    width:67px;
+	text-align:center;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+	background-color:#f6f6f6;
+}
+
+.list-box{
+    background-color: #BCE1F1;
+    width: 315px;
+    height: 430px;
+	padding: 0px 20px;
+	margin-top: 20px;
+	overflow: auto;
+    border-radius: 10px;
+}
+
+.todo-item-content{
+    display: inline;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.edit-btn, .remove-btn{
+    display: inline;
+    float: right;
+}
+
+.date{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'KoPubDotumBold';
+    color: #03151D;
+}
+
+.home{
+    margin-top: 50px;
+}
+
+#img{
+    background-color: transparent;
+    border: 0px transparent solid;
+    cursor: pointer;
+    outline: none;
+}
+
+#edit-box{
+    font-family: 'Nanum Gothic';
+    display: inline;
+    margin: 0px 8px 0px 5px;
+    width: 130px;
+    height: 28px;
+    font-size: 15px;
+    border-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    font-family: "NanumSquare_acR";
+}
