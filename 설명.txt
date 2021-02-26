@@ -1,3 +1,13 @@
+### 순서
+1. zip파일 다운로드 후 압축 풀기
+2. 에디터(브라켓, 비주얼스튜디오코드 등)에서 열기
+3. cmd 창에서 폴더 경로로 들어간 후 npm install -> node_modules 폴더 생김
+4. cmd 창에서 node app.js 입력
+5. localhost:3000/todo 확인!
+
+
+### 디렉토리 및 파일 설명
+
 // 백엔드
 controllers - 실제 데이터 처리하는 로직 부분
 models - 몽고DB에서 사용할 스키마 파일들
@@ -8,8 +18,10 @@ public - fonts, css, images 부분
 views - 웹 페이지 ejs, pug, html 등등 사용, jsp와 유사
 
 // 실행 파일
-app.js - 실행 서버 파일 ex) node app.js, nodemon app.js, npm start 이렇게 실행
+app.js - 실행 서버 파일 ex) node app.js, nodemon app.js, npm start 상황에 따라 실행
 package.json - dependencies 리스트가 있어서 이 폴더 경로에서 npm install 시 모듈 전부 설치됨
+
+
 
 
 
