@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEATHER</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/weather.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="home">
+        <button type="button" id="img" onclick="location.href='/'">
+            <img src="../../public/images/rainbow.png" width="70">
+        </button>
+    </div>
+    <h1 class="main-text">WEATHER</h1>
+    <hr><br>
+    <form action="/weather/search" method="post" class="form-box">
+        <input type="text" class="text-box" name="city" placeholder="Enter a City" required>
+        <button type="submit" class="btn-gradient cyan">Search</button>
+    </form>
+    <br>
+    <% if(weatherInfo != null){ %>
+    <div class="weather-box">
+        <p id="city-name"> <%= weatherInfo.name %> </p>
+        <img src="//openweathermap.org/img/w/<%= weatherInfo.icon %>.png" width="120px" height="120px">
+        <br>
+        <p id="temp"><%= weatherInfo.temp %>°C&nbsp;</p>
+        <p id="description"> <%= weatherInfo.description %> </p>
+        <p id="feelslike"> 체감온도 <%= weatherInfo.feels_like %>°C</p>
+        <p id="min"><%= weatherInfo.temp_min %>°C&ensp;</p> |
+        <p id="max">&ensp;<%= weatherInfo.temp_max %>°C</p>
+    </div>
+    <% } %>
+    
+    <% if(error != null){ %>
+    <div class="error-box">
+        <h1> <%= error %> </h1>
+    </div>
+    <% } %>
+</body>
+</html>
